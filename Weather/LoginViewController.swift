@@ -7,56 +7,59 @@
 //
 
 import UIKit
-import FirebaseUI
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTxt: UITextField!
+    @IBOutlet weak var passTxt: UITextField!
+    @IBOutlet weak var signInBtn: UIButton!
+    @IBOutlet weak var errorLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupElement()
     
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        //Dispose of any resources that can be retracted
+
+    func setupElement(){
+        
+        //Hide error label
+        errorLbl.alpha = 0
+        signInBtn.layer.cornerRadius = 5
+        passTxt.isSecureTextEntry = true
+        
+        
     }
     
-
     @IBAction func signInTapped(_ sender: UIButton) {
         
-          // Get the default auth object
-            let authUI = FUIAuth.defaultAuthUI()
+        let email = emailTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
-            guard authUI != nil else {
-            // Log the Error
-            return
+            //user failed sign in
+            if error != nil {
+                self.errorLbl.text = error!.localizedDescription
+                self.errorLbl.alpha = 1
+            }else{
+                //user success sign in
+                self.transitionHome()
             }
-            
-            // Set ourselves as the delegate
-        authUI?.delegate = self
-            
-            // Get a reference to be the auth UI view controller
-        let authVC = authUI!.authViewController()
-            
-            // Show it
-        present(authVC, animated: true, completion: nil)
-    }
-  
-
-}
-
-extension LoginViewController: FUIAuthDelegate{
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        
-        if error != nil{
-            // Log error
-            return
         }
         
-        //authDataResult.user.uid
+    }
+    
+    func transitionHome(){
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constant.Storyboard.homeVC) as? HomeViewController
         
-        performSegue(withIdentifier: "goHome", sender: self)
-    } 
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
+
+    
 }
+
+
