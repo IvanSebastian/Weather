@@ -17,9 +17,12 @@
 		C5541BD3248A5F4000EE737B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5541BD2248A5F4000EE737B /* Assets.xcassets */; };
 		C5541BD6248A5F4000EE737B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5541BD4248A5F4000EE737B /* LaunchScreen.storyboard */; };
 		C5541BDE248A5FB800EE737B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5541BDD248A5FB800EE737B /* GoogleService-Info.plist */; };
+		C57BF98C248B7D6400CD1B1C /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BF98B248B7D6400CD1B1C /* WeatherCell.swift */; };
 		C5B04C27248A8EAE00E5FCCF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B04C26248A8EAE00E5FCCF /* LoginViewController.swift */; };
 		C5CF454A248AB872006059C7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF4549248AB872006059C7 /* Constant.swift */; };
 		C5CF454C248ABB01006059C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF454B248ABB01006059C7 /* HomeViewController.swift */; };
+		C5CF454E248B7147006059C7 /* history.city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = C5CF454D248B7147006059C7 /* history.city.list.json */; };
+		C5CF4550248B7533006059C7 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF454F248B7533006059C7 /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +39,12 @@
 		C5541BD5248A5F4000EE737B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5541BD7248A5F4000EE737B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5541BDD248A5FB800EE737B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C57BF98B248B7D6400CD1B1C /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		C5B04C26248A8EAE00E5FCCF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C5CF4549248AB872006059C7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C5CF454B248ABB01006059C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C5CF454D248B7147006059C7 /* history.city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = history.city.list.json; sourceTree = "<group>"; };
+		C5CF454F248B7533006059C7 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		FA13B73EFD53FEC4B58658A2 /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +102,9 @@
 				C5541BCB248A5F3E00EE737B /* SceneDelegate.swift */,
 				C5541BCD248A5F3E00EE737B /* ViewController.swift */,
 				C5541BCF248A5F3E00EE737B /* Main.storyboard */,
+				C57BF98B248B7D6400CD1B1C /* WeatherCell.swift */,
+				C5CF454F248B7533006059C7 /* HomeTableViewController.swift */,
+				C5CF454D248B7147006059C7 /* history.city.list.json */,
 				C5CF454B248ABB01006059C7 /* HomeViewController.swift */,
 				C5CF4549248AB872006059C7 /* Constant.swift */,
 				C5B04C26248A8EAE00E5FCCF /* LoginViewController.swift */,
@@ -169,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CF454E248B7147006059C7 /* history.city.list.json in Resources */,
 				C5541BD6248A5F4000EE737B /* LaunchScreen.storyboard in Resources */,
 				C5541BDE248A5FB800EE737B /* GoogleService-Info.plist in Resources */,
 				C5541BD3248A5F4000EE737B /* Assets.xcassets in Resources */,
@@ -227,10 +237,12 @@
 			files = (
 				C5CF454A248AB872006059C7 /* Constant.swift in Sources */,
 				C5B04C27248A8EAE00E5FCCF /* LoginViewController.swift in Sources */,
+				C57BF98C248B7D6400CD1B1C /* WeatherCell.swift in Sources */,
 				C53377F8248AAAD9002779A5 /* Style.swift in Sources */,
 				C5CF454C248ABB01006059C7 /* HomeViewController.swift in Sources */,
 				C53377F6248A9D97002779A5 /* RegisterViewController.swift in Sources */,
 				C5541BCE248A5F3E00EE737B /* ViewController.swift in Sources */,
+				C5CF4550248B7533006059C7 /* HomeTableViewController.swift in Sources */,
 				C5541BCA248A5F3E00EE737B /* AppDelegate.swift in Sources */,
 				C5541BCC248A5F3E00EE737B /* SceneDelegate.swift in Sources */,
 			);
