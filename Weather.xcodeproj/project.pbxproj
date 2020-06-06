@@ -18,6 +18,7 @@
 		C5541BD6248A5F4000EE737B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5541BD4248A5F4000EE737B /* LaunchScreen.storyboard */; };
 		C5541BDE248A5FB800EE737B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5541BDD248A5FB800EE737B /* GoogleService-Info.plist */; };
 		C57BF98C248B7D6400CD1B1C /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BF98B248B7D6400CD1B1C /* WeatherCell.swift */; };
+		C57BF992248B988000CD1B1C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57BF991248B988000CD1B1C /* WebViewController.swift */; };
 		C5B04C27248A8EAE00E5FCCF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B04C26248A8EAE00E5FCCF /* LoginViewController.swift */; };
 		C5CF454A248AB872006059C7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF4549248AB872006059C7 /* Constant.swift */; };
 		C5CF454C248ABB01006059C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF454B248ABB01006059C7 /* HomeViewController.swift */; };
@@ -40,6 +41,7 @@
 		C5541BD7248A5F4000EE737B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5541BDD248A5FB800EE737B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C57BF98B248B7D6400CD1B1C /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		C57BF991248B988000CD1B1C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C5B04C26248A8EAE00E5FCCF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C5CF4549248AB872006059C7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C5CF454B248ABB01006059C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				C5541BCB248A5F3E00EE737B /* SceneDelegate.swift */,
 				C5541BCD248A5F3E00EE737B /* ViewController.swift */,
 				C5541BCF248A5F3E00EE737B /* Main.storyboard */,
+				C57BF991248B988000CD1B1C /* WebViewController.swift */,
 				C57BF98B248B7D6400CD1B1C /* WeatherCell.swift */,
 				C5CF454F248B7533006059C7 /* HomeTableViewController.swift */,
 				C5CF454D248B7147006059C7 /* history.city.list.json */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CF454A248AB872006059C7 /* Constant.swift in Sources */,
+				C57BF992248B988000CD1B1C /* WebViewController.swift in Sources */,
 				C5B04C27248A8EAE00E5FCCF /* LoginViewController.swift in Sources */,
 				C57BF98C248B7D6400CD1B1C /* WeatherCell.swift in Sources */,
 				C53377F8248AAAD9002779A5 /* Style.swift in Sources */,

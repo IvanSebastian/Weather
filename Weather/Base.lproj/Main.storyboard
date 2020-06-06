@@ -146,6 +146,7 @@
                                 <connections>
                                     <outlet property="CountryLbl" destination="BTI-UY-Bcs" id="zV9-SY-77x"/>
                                     <outlet property="idLbl" destination="1KL-N4-T6C" id="6Un-bn-hKD"/>
+                                    <segue destination="h6w-Tu-iTg" kind="presentation" modalPresentationStyle="fullScreen" id="Jjv-mf-bpM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -154,63 +155,48 @@
                             <outlet property="delegate" destination="INj-wi-3Wo" id="WbV-UD-M6X"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="vSj-Z9-gR3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAH-lz-WdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.75362318840587" y="710.86956521739137"/>
+            <point key="canvasLocation" x="1713" y="830"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="DB8-jf-ggt">
+        <!--Web View Controller-->
+        <scene sceneID="jVI-cF-7SO">
             <objects>
-                <viewController id="syL-CY-xHy" customClass="HomeViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U4T-Jv-IQk">
+                <viewController storyboardIdentifier="web" id="dXk-nc-a8u" customClass="WebViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHY-Xn-akh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Cn-IL-h6g">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2gY-Xa-Z9J" style="IBUITableViewCellStyleDefault" id="hJX-3z-tKw">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJX-3z-tKw" id="kYd-me-Z2I">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2gY-Xa-Z9J">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="syL-CY-xHy" id="jpA-Go-wNC"/>
-                                    <outlet property="delegate" destination="syL-CY-xHy" id="c8z-o5-oaT"/>
-                                </connections>
-                            </tableView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vV-8I-ZDn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4Cn-IL-h6g" firstAttribute="bottom" secondItem="Ggd-Lb-beH" secondAttribute="bottom" id="HXw-7y-DrK"/>
-                            <constraint firstItem="4Cn-IL-h6g" firstAttribute="leading" secondItem="Ggd-Lb-beH" secondAttribute="leading" id="VUc-oG-xhh"/>
-                            <constraint firstItem="4Cn-IL-h6g" firstAttribute="trailing" secondItem="Ggd-Lb-beH" secondAttribute="trailing" id="ZcO-ux-wRs"/>
-                            <constraint firstItem="4Cn-IL-h6g" firstAttribute="top" secondItem="Ggd-Lb-beH" secondAttribute="top" id="lzr-3a-y2f"/>
+                            <constraint firstItem="7vV-8I-ZDn" firstAttribute="top" secondItem="xBK-Ip-3W7" secondAttribute="top" id="J3J-IL-A5t"/>
+                            <constraint firstItem="7vV-8I-ZDn" firstAttribute="trailing" secondItem="xBK-Ip-3W7" secondAttribute="trailing" id="Kmu-uB-7lh"/>
+                            <constraint firstItem="7vV-8I-ZDn" firstAttribute="bottom" secondItem="xBK-Ip-3W7" secondAttribute="bottom" id="R01-Oe-yEW"/>
+                            <constraint firstItem="7vV-8I-ZDn" firstAttribute="leading" secondItem="xBK-Ip-3W7" secondAttribute="leading" id="TQv-Ea-8Cb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ggd-Lb-beH"/>
+                        <viewLayoutGuide key="safeArea" id="xBK-Ip-3W7"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PaU-xm-BdP">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="0hN-mS-nYc">
+                            <connections>
+                                <segue destination="INj-wi-3Wo" kind="presentation" modalPresentationStyle="fullScreen" id="hUH-pa-NJd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mTableview" destination="4Cn-IL-h6g" id="ZD6-44-djj"/>
+                        <outlet property="webView" destination="7vV-8I-ZDn" id="gEa-ej-Uea"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gi9-yr-0d0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tee-Zy-wRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1611.5942028985507" y="710.86956521739137"/>
+            <point key="canvasLocation" x="3418.840579710145" y="829.89130434782612"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="5zV-2A-8SP">
@@ -302,5 +288,26 @@
             </objects>
             <point key="canvasLocation" x="1760.8695652173915" y="42.391304347826093"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KJG-QQ-4Am">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h6w-Tu-iTg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ykF-yC-dTW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dXk-nc-a8u" kind="relationship" relationship="rootViewController" id="oH1-hU-Bl8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqr-w5-OQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511.594202898551" y="829.89130434782612"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hUH-pa-NJd"/>
+    </inferredMetricsTieBreakers>
 </document>
